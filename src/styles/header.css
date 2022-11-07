@@ -1,0 +1,39 @@
+header{
+    height: 5rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 12px 10%;
+    justify-content: space-between;
+    box-shadow: rgba(209, 63, 63, 0.2) 0px 2px 8px 0px;
+    
+    
+}
+.logo{
+    color: white;
+}
+
+.menu{
+    padding: 15px;
+}
+.menu > li{
+    display: inline-block;
+    margin: 15px; 
+}
+Link{
+    color: white;
+}
+.menubutton {
+    background-color: #F5FF27;
+    padding: 15px 45px;
+    border-radius: 20px;
+   
+}
+
+.menubutton:hover{
+    cursor: pointer;
+       
+}
+#menubtn{
+    color: black;
+}

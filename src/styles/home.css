@@ -1,0 +1,38 @@
+.container{
+    background: url("../assets/space_img.png") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    width: 40%;
+    background-color: #010204; 
+    border-radius: 25px;
+    padding: 60px;
+    color: white;
+}
+.left > h1 { 
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.left > p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 2rem;
+
+}
+.left > button { 
+    background-color: #F5FF27;
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.right > img{
+    width: 120%;
+
+}
+

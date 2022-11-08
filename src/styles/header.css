@@ -23,17 +23,10 @@ header{
 Link{
     color: white;
 }
-.menubutton {
+.drabtn {
     background-color: #F5FF27;
     padding: 15px 45px;
     border-radius: 20px;
-   
-}
-
-.menubutton:hover{
     cursor: pointer;
-       
-}
-#menubtn{
-    color: black;
+   
 }

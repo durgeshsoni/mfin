@@ -1,9 +1,25 @@
 import React from 'react'
+import { useState } from "react";
 import { Link } from 'react-router-dom'
+
 import '../styles/header.css'
+import Drawer from './Drawer';
+import Backdrop from './Backdrop';
 
 const Header = () => {
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  function handleOpenDrawerButton() {
+    setDrawerOpen(!drawerOpen);
+  }
+  function handleBackdropClick() {
+    setDrawerOpen(false);
+  }
+ 
   return (
+
+    
     <header>
         {/* Logo part  */}
     <div className="logo">
@@ -17,9 +33,9 @@ const Header = () => {
     </ul>
     {/* Menu Button Part  */}
     <div className="menubutton">
-        <Link to="/getstarted"> 
-       <span id='menubtn'>Get Started</span>
-        </Link>
+      <Drawer show={drawerOpen}/>
+      {drawerOpen && <Backdrop closeDrawer={handleBackdropClick} />}
+        <button className='drabtn' onClick={handleOpenDrawerButton}>Get Started</button>
     </div>
     
     </header>

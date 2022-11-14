@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom'
 
 import '../styles/header.css'
 
-
 const LoggedIn= () =>{
   return(
-    <button className='drabtn'>My Account</button>
+    <button className='drabtn'> 
+    <Link to="/dashboard">
+    My Account</Link></button>
   )
 }
 

@@ -1,25 +1,34 @@
-import React from 'react'
-import { useState } from "react";
+import React, {useEffect, useState} from 'react';
+import {auth, provider } from './firebase'
+import {signInWithPopup} from "firebase/auth";
 import { Link } from 'react-router-dom'
 
 import '../styles/header.css'
-import Drawer from './Drawer';
-import Backdrop from './Backdrop';
+
+
+const LoggedIn= () =>{
+  return(
+    <button className='drabtn'>My Account</button>
+  )
+}
+
 
 const Header = () => {
 
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  function handleOpenDrawerButton() {
-    setDrawerOpen(!drawerOpen);
+  const [value,setValue] = useState('')
+  const handleClick =()=>{
+      signInWithPopup(auth,provider).then((data)=>{
+          setValue(data.user.email)
+          localStorage.setItem("email",data.user.email)
+      })
   }
-  function handleBackdropClick() {
-    setDrawerOpen(false);
-  }
- 
-  return (
 
-    
+  useEffect(()=>{
+      setValue(localStorage.getItem('email'))
+  })
+
+  
+  return (    
     <header>
         {/* Logo part  */}
     <div className="logo">
@@ -33,9 +42,9 @@ const Header = () => {
     </ul>
     {/* Menu Button Part  */}
     <div className="menubutton">
-      <Drawer show={drawerOpen}/>
-      {drawerOpen && <Backdrop closeDrawer={handleBackdropClick} />}
-        <button className='drabtn' onClick={handleOpenDrawerButton}>Get Started</button>
+    {value? <LoggedIn/>:
+        <button className='drabtn' onClick={handleClick}>Get Started</button>
+  }
     </div>
     
     </header>

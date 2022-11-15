@@ -9,7 +9,7 @@ header{
     
     
 }
-.logo{
+#logoName{
     color: white;
 }
 
@@ -20,13 +20,15 @@ header{
     display: inline-block;
     margin: 15px; 
 }
-Link{
+#NavLink{
     color: white;
 }
-.drabtn {
+
+.drabtn, #deposit, #withdrawal {
     background-color: #F5FF27;
     padding: 15px 45px;
-    border-radius: 20px;
+    border-radius: 8px;
     cursor: pointer;
-   
+    color: black;
+   margin: 20px;
 }

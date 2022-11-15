@@ -33,13 +33,13 @@ const Header = () => {
     <header>
         {/* Logo part  */}
     <div className="logo">
-       <Link to="/"> <h1>Sarax Space</h1></Link>
+       <Link to="/"> <h1 id='logoName'>Sarax Space</h1></Link>
     </div>
     {/* Menu Part Start  */}
     <ul className="menu">
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
-    <li><Link to="/contact">Contact</Link></li>
+    <li ><Link id='NavLink' to="/">Home</Link></li>
+    <li ><Link id='NavLink' to="/about">About</Link></li>
+    <li ><Link id='NavLink' to="/contact">Contact</Link></li>
     </ul>
     {/* Menu Button Part  */}
     <div className="menubutton">

@@ -1,0 +1,73 @@
+.dashHeader{
+    width: auto;
+    height: 45px;
+    background-color: #ffa127;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.dashMenu{
+    margin: 30px;
+    color: black;
+}
+.box_container{
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 5rem;
+}
+
+.DashText, .DashBTN{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.DashText > p{
+    font-size: 20px;
+}
+
+.DashText > p >  span{
+    font-size: 30px;
+}
+
+.DashBTN > button {
+    margin: 20px;
+    background-color: #F5FF27;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#deposit{
+    box-shadow: rgba(241, 143, 62, 0.35) 0px 5px 15px;
+    
+}
+
+.recentActivity{
+    margin-top:  10em;
+}
+.recentActivity > h3{
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+.recentHistory{
+    
+    background-color: beige;
+    padding: 0 30px;
+    color: black;
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50px;
+}
